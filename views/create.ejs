@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('partials/head'); -%>
+  </head>
+  <body class="container">
+    <header>
+      <%- include('partials/header') -%>
+    </header>
+    <div>
+      <h1>Create User</h1>
+      <form method="POST" action="create">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="name">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" class="form-control" id="phone" placeholder="phone">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </body>
+</html>
