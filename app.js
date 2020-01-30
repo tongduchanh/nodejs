@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var userRoutes = require('./server/routes/user')
-import routes from './server/routes/user'
+import userRoutes from './server/routes/user'
+import bookRoutes from './server/routes/book'
 var app = express();
 
 // view engine setup
@@ -18,7 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-routes(app)
+userRoutes(app)
+bookRoutes(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
