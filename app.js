@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-import userRoutes from './server/routes/user'
-import bookRoutes from './server/routes/book'
+import userRoutes from './routes/user'
+import bookRoutes from './routes/book'
 var app = express();
 
 // view engine setup
