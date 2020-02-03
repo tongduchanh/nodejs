@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  nodejs:
+    image: bookstore
+    build: .
+    ports:
+      - 9001:3000
