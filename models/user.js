@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    name: {
+    full_name: {
       type: DataTypes.STRING,
       allowNull: {
         args: false,
@@ -37,20 +37,7 @@ export default (sequelize, DataTypes) => {
         args: false,
         msg: 'Please enter a password'
       },
-      validate: {
-        isNotShort: (value) => {
-          if (value.length < 8) {
-            throw new Error('Password should be at least 8 characters');
-          }
-        },
-      },
     }
   }, {});
-  User.associate = (models) => {
-    // associations can be defined here
-    User.hasMany(models.Book, {
-      foreignKey: 'userId',
-    });
-  };
   return User;
 };

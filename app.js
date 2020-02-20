@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 import userRoutes from './routes/user'
-import bookRoutes from './routes/book'
 var app = express();
 
 // view engine setup
@@ -19,7 +18,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 userRoutes(app)
-bookRoutes(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

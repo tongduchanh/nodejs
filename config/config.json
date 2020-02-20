@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "admin",
     "password": "A12345678",
-    "database": "bookstore",
-    "host": "localhost",
+    "database": "beta",
+    "host": "18.140.70.9",
     "dialect": "postgres",
     "operatorsAliases": false
   },
