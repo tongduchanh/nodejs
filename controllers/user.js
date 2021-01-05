@@ -28,7 +28,6 @@ class Users {
         message_code: null,
         message: null,
         data,
-        true
       }))
   }
 
