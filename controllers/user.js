@@ -21,7 +21,8 @@ class Users {
         name,
         username,
         email,
-        password
+        password,
+        true,
       })
       .then(data => res.status(201).send({
         status: true,
